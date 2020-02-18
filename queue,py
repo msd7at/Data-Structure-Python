@@ -1,0 +1,20 @@
+n=int(input())
+a=[0]*n
+f,r=-1,-1
+def enqueue(x):
+    global r
+    global f
+    if r==n-1:
+        print(" queue is full")
+    else:
+        r=r+1
+        a[r]=x
+def dequeue():
+    global r
+    global f
+    if f==r:
+        print("empty")
+    else:
+        f=f+1
+        a[f]=0
+        
