@@ -1,0 +1,19 @@
+t=int(input())
+for x in range(t):
+    l=int(input())
+    s=list(input().split())
+    st=[-1]*26
+    q=[]
+    f=0
+    for i in s:
+        st[ord(i)-97]+=1
+        if st[ord(i)-97]==0:
+            q.append(i)
+        else:
+            while f< len(q) and st[ord(q[f])-97]>0:
+                f+=1
+        if f==len(q):
+            print(-1,end=" ")
+        else:
+            print(q[f],end=" ")
+    print()
