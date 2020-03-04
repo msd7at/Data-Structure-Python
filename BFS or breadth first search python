@@ -1,0 +1,18 @@
+v=int(input())
+graph={}
+for i in range(v):
+    key=input()
+    l=list(input().split())
+    graph[key]=l
+    
+def BFS(graph,node):
+    visited,queue=[],[]
+    visited.append(node)
+    queue.append(node)
+    while queue:
+        s=queue.pop()
+        print(s)
+        for i in graph[s]:
+            if i not in visited:
+                visited.append(i)
+                queue.append(i)
